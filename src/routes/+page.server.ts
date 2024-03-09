@@ -1,10 +1,12 @@
 import { pb } from "$lib/pocketbase.server";
+import { redirect } from "@sveltejs/kit";
 
 export const load = async (event) => {
     try{
         pb.collection('visit').create({
-            url:"/",
-            context:event
+            url:event.url,
+            context:event,
+            IP:event.getClientAddress(),
         });
     } catch(_){
 
@@ -20,15 +22,18 @@ export const actions = {
 		const youtubeChannel = data.get('youtube_channel') as string;
 
         try{
-            await pb.collection('register').create({
+            pb.collection('register').create({
                 email:email,
                 first_name:firstName,
                 last_name:lastName,
                 youtube_channel:youtubeChannel,
                 context:event,
+                IP:event.getClientAddress(),
             });
         } catch(_){
     
         }
+
+        throw redirect(302, "/success")
     }
 };

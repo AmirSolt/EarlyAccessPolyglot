@@ -30,6 +30,7 @@
   },
   "type": "module",
   "dependencies": {
+    "lucide-svelte": "^0.354.0",
     "pocketbase": "^0.21.1"
   }
 }

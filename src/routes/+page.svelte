@@ -1,15 +1,29 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+<script lang="ts">
+  import Hero from "./Hero.svelte";
+  import Description from "./Description.svelte";
+  import SignupForm from "./SignupForm.svelte";
+</script>
 
-<div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-5">
-		<h1 class="h1">Let's get cracking bones!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code class="code">/src/routes/+layout.svelte</code> - barebones layout</li>
-			<li><code class="code">/src/app.postcss</code> - app wide css</li>
-			<li>
-				<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
-			</li>
-		</ul>
-	</div>
+<br />
+<div class="flex justify-center items-center m-4">
+  <div class="max-w-6xl flex flex-col gap-4">
+    <Hero />
+    <Description />
+    <hr />
+    <br />
+    <SignupForm />
+  </div>
 </div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
