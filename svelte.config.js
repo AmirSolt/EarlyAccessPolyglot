@@ -9,9 +9,6 @@ const config = {
 	preprocess: [vitePreprocess()],
 	kit: {
 		adapter: adapter(),
-		env:{
-			port:"PORT"
-		}
 	}
 };
 export default config;
