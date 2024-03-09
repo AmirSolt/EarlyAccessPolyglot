@@ -5,7 +5,6 @@ export const load = async (event) => {
     try{
         pb.collection('visit').create({
             url:event.url,
-            context:JSON.stringify(event),
             IP:event.getClientAddress(),
         });
     } catch(_){
@@ -27,7 +26,6 @@ export const actions = {
                 first_name:firstName,
                 last_name:lastName,
                 youtube_channel:youtubeChannel,
-                context:JSON.stringify(event),
                 IP:event.getClientAddress(),
             });
         } catch(_){
