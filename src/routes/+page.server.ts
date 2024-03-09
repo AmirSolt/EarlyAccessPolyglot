@@ -2,15 +2,15 @@ import { pb } from "$lib/pocketbase.server";
 import { redirect } from "@sveltejs/kit";
 
 export const load = async (event) => {
-    // try{
-    //     pb.collection('visit').create({
-    //         url:event.url,
-    //         context:event,
-    //         IP:event.getClientAddress(),
-    //     });
-    // } catch(_){
+    try{
+        pb.collection('visit').create({
+            url:event.url,
+            context:JSON.stringify(event),
+            IP:event.getClientAddress(),
+        });
+    } catch(_){
 
-    // }
+    }
 };
 
 export const actions = {
@@ -27,7 +27,7 @@ export const actions = {
                 first_name:firstName,
                 last_name:lastName,
                 youtube_channel:youtubeChannel,
-                context:event,
+                context:JSON.stringify(event),
                 IP:event.getClientAddress(),
             });
         } catch(_){
