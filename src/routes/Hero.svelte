@@ -7,8 +7,6 @@
     </strong>
   </h1>
   <h1 class="text-4xl">(Early Access)</h1>
-  <p class="text-2xl">
-    Translate Your Channel for Worldwide Audience using AI.
-  </p>
+  <p class="text-2xl">Translate Your Videos for Worldwide Audience using AI.</p>
   <p>Translate audio, subtitles, description, metadata</p>
 </div>
