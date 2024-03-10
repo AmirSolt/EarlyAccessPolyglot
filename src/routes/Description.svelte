@@ -27,7 +27,7 @@
 
 <div class="w-full flex flex-col justify-center items-center">
   <div class="flex justify-center items-center">
-    <img src={`GB.png`} alt="English Channel" class="w-40 md:w-64" />
+    <img src={`GB.png`} alt="English Channel" class="w-40 md:w-56" />
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 64 24"
@@ -43,11 +43,11 @@
       <img
         src="SP.png"
         alt="Translated Channel"
-        class="w-40 md:w-64 anim active"
+        class="w-40 md:w-56 anim active"
       />
-      <img src="CH.png" alt="Translated Channel" class="w-40 md:w-64" />
-      <img src="FR.png" alt="Translated Channel" class="w-40 md:w-64" />
-      <img src="IN.png" alt="Translated Channel" class="w-40 md:w-64" />
+      <img src="CH.png" alt="Translated Channel" class="w-40 md:w-56" />
+      <img src="FR.png" alt="Translated Channel" class="w-40 md:w-56" />
+      <img src="IN.png" alt="Translated Channel" class="w-40 md:w-56" />
     </div>
   </div>
 </div>
