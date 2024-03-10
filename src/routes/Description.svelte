@@ -1,23 +1,23 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
 
   onMount(() => {
-    const images = document.querySelectorAll(".slideshow-container img");
+    const frames = document.querySelectorAll(".slideshow-container .frame");
     let currentIndex = 0;
 
-    function showImage(index) {
-      images.forEach((image, i) => {
+    function showImage(index: number) {
+      frames.forEach((frame, i) => {
         if (i === index) {
-          image.classList.add("active", "anim");
+          frame.classList.add("active", "anim");
         } else {
-          image.classList.remove("active");
+          frame.classList.remove("active");
         }
       });
     }
 
     function nextSlide() {
       console.log(">>>");
-      currentIndex = (currentIndex + 1) % images.length;
+      currentIndex = (currentIndex + 1) % frames.length;
       showImage(currentIndex);
     }
 
@@ -27,7 +27,14 @@
 
 <div class="w-full flex flex-col justify-center items-center">
   <div class="flex justify-center items-center">
-    <img src={`GB.png`} alt="English Channel" class="w-40 md:w-56" />
+    <div>
+      <img class="w-20 md:w-32" src="EN.png" alt="" />
+      <img
+        src="video.png"
+        alt="Original Video"
+        class="absolute w-12 md:w-16 video-trans"
+      />
+    </div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 64 24"
@@ -40,30 +47,58 @@
     </svg>
 
     <div class="slideshow-container">
-      <img
-        src="SP.png"
-        alt="Translated Channel"
-        class="w-40 md:w-56 anim active"
-      />
-      <img src="CH.png" alt="Translated Channel" class="w-40 md:w-56" />
-      <img src="FR.png" alt="Translated Channel" class="w-40 md:w-56" />
-      <img src="IN.png" alt="Translated Channel" class="w-40 md:w-56" />
+      <div class="frame active anim">
+        <img class="w-20 md:w-32" src="SP.png" alt="" />
+        <img
+          src="video.png"
+          alt="Original Video"
+          class="absolute w-12 md:w-16 video-trans"
+        />
+      </div>
+      <div class="frame">
+        <img class="w-20 md:w-32" src="CH.png" alt="" />
+        <img
+          src="video.png"
+          alt="Original Video"
+          class="absolute w-12 md:w-16 video-trans"
+        />
+      </div>
+      <div class="frame">
+        <img class="w-20 md:w-32" src="FR.png" alt="" />
+        <img
+          src="video.png"
+          alt="Original Video"
+          class="absolute w-12 md:w-16 video-trans"
+        />
+      </div>
+      <div class="frame">
+        <img class="w-20 md:w-32" src="IN.png" alt="" />
+        <img
+          src="video.png"
+          alt="Original Video"
+          class="absolute w-12 md:w-16 video-trans"
+        />
+      </div>
     </div>
   </div>
 </div>
 
 <style>
-  .slideshow-container img {
+  .video-trans {
+    transform: translate3d(100%, -100%, 0);
+  }
+
+  .slideshow-container .frame {
     display: none;
     opacity: 0;
   }
 
-  .slideshow-container img.active {
+  .slideshow-container .frame.active {
     display: block;
     opacity: 1;
   }
 
-  .slideshow-container img.anim {
+  .slideshow-container .frame.anim {
     animation: frame 3s linear forwards;
   }
 
