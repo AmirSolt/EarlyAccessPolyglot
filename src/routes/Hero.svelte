@@ -8,6 +8,6 @@
   </h1>
   <h1 class="text-4xl">(Early Access)</h1>
   <p class="text-2xl">
-    Translate Your Channel for International Audience using AI.
+    Translate Your Channel for Worldwide Audience using AI.
   </p>
 </div>
