@@ -40,7 +40,6 @@
       type="text"
       name="channel_url"
       placeholder="https://www.example.com/@example"
-      required
     />
   </label>
   <div></div>
