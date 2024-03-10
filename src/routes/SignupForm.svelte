@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { page } from "$app/stores";
+</script>
+
 <h1 class="text-3xl">Limited early access slots available</h1>
 
 <form
@@ -5,6 +9,7 @@
   method="post"
   class="flex flex-col justify-center items-center gap-4"
 >
+  <input type="hidden" name="source" value={$page.url.searchParams.get("s")} />
   <label class="label w-full">
     <span>Email</span>
     <input
@@ -34,14 +39,81 @@
     />
   </label>
   <label class="label w-full">
-    <span>Channel URL</span>
+    <span
+      >What is your main platform? (Youtube, Tiktok, Instagram, Website, ...)</span
+    >
     <input
       class="input w-full"
       type="text"
       name="channel_url"
-      placeholder="https://www.example.com/@example"
+      placeholder="https://www.example.com/"
     />
   </label>
+
+  <div class="flex flex-col justify-start items-start w-full">
+    <span>What social platforms are you on:</span>
+    <div class="flex justify-start items-start gap-4 m-2">
+      <div class="space-y-2">
+        <label class="flex items-center space-x-2">
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="platforms"
+            value="Youtube"
+          />
+          <p>Youtube</p>
+        </label>
+        <label class="flex items-center space-x-2">
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="platforms"
+            value="Tiktok"
+          />
+          <p>Tiktok</p>
+        </label>
+        <label class="flex items-center space-x-2">
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="platforms"
+            value="Instagram"
+          />
+          <p>Instagram</p>
+        </label>
+      </div>
+      <div class="space-y-2">
+        <label class="flex items-center space-x-2">
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="platforms"
+            value="Facebook"
+          />
+          <p>Facebook</p>
+        </label>
+        <label class="flex items-center space-x-2">
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="platforms"
+            value="WeChat"
+          />
+          <p>WeChat</p>
+        </label>
+        <label class="flex items-center space-x-2">
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="platforms"
+            value="Other"
+          />
+          <p>Other</p>
+        </label>
+      </div>
+    </div>
+  </div>
+
   <div></div>
   <button
     type="submit"
