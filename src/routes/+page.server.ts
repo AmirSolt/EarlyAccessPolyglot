@@ -18,7 +18,7 @@ export const actions = {
 		const email = data.get('email') as string;
 		const firstName = data.get('first_name') as string;
 		const lastName = data.get('last_name') as string;
-		const youtubeChannel = data.get('channel_url') as string;
+		const channel_url = data.get('channel_url') as string;
 
         try{
             pb.collection('register').create({
