@@ -10,12 +10,21 @@
       <svelte:fragment slot="lead">
         <a href="/" class="flex justify-center items-center">
           <img src="logo.png" alt="Logo" class="w-12" />
-          <strong class="text-xl text-secondary-500 uppercase">Polygtube</strong
-          >
         </a>
       </svelte:fragment>
     </AppBar>
   </svelte:fragment>
   <!-- Page Route Content -->
   <slot />
+
+  <svelte:fragment slot="footer">
+    <hr />
+    <div class="flex flex-col justify-center items-end m-4">
+      <a href="/" class="flex justify-center items-center">
+        <img src="logo.png" alt="Logo" class="w-12" />
+      </a>
+      <p>POLYTUBE 2024</p>
+      <p>More information coming soon!</p>
+    </div>
+  </svelte:fragment>
 </AppShell>

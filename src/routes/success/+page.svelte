@@ -4,6 +4,7 @@
 
 <div class="card-mod flex flex-col justify-center items-center gap-4">
   <br />
+  <br />
 
   <CheckCircle color="#15CE48" size={200} />
 
@@ -13,3 +14,9 @@
     <p>You maybe chosen for our next Beta testing.</p>
   </div>
 </div>
+
+<br />
+<br />
+<br />
+<br />
+<br />

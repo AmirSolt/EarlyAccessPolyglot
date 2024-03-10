@@ -64,7 +64,7 @@
   }
 
   .slideshow-container img.anim {
-    animation: frame 3s ease-in-out forwards;
+    animation: frame 3s linear forwards;
   }
 
   @keyframes frame {
