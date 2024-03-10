@@ -10,5 +10,5 @@
   <p class="text-2xl">
     Translate Your Channel for Worldwide Audience using AI.
   </p>
-  <p>Translate Audio, subtitles, description, metadata</p>
+  <p>Translate audio, subtitles, description, metadata</p>
 </div>
