@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores";
+  let { referrer } = $page.data;
 </script>
 
 <h1 class="text-3xl">Limited early access slots available</h1>
@@ -9,7 +10,8 @@
   method="post"
   class="flex flex-col justify-center items-center gap-4"
 >
-  <input type="hidden" name="source" value={$page.url.searchParams.get("s")} />
+  <input type="hidden" name="referrer" value={referrer} />
+
   <label class="label w-full">
     <span>Email</span>
     <input

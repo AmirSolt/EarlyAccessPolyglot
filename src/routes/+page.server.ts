@@ -1,36 +1,28 @@
 import { pb } from "$lib/pocketbase.server";
 import { redirect } from "@sveltejs/kit";
 
-function getSourceName(sourceIDStr:string|null):string{
-    if(sourceIDStr==null){
-        return ""
-    }
-    const sourceID = parseInt(sourceIDStr)
-    console.log("sourceID: ",sourceID)
-    switch (sourceID) {
-        case 1:
-            return "reddit"
-        default:
-            return ""
-    }
-}
 
 export const load = async (event) => {
+    
+    const referrer = event.request.headers.get('referer')||""
+
     try{
         pb.collection('visit').create({
             url:event.url,
-            source:getSourceName(event.url.searchParams.get("s")),
+            source:referrer,
             IP:event.getClientAddress(),
         });
     } catch(_){
 
     }
+
+    return {referrer}
 };
 
 export const actions = {
     register: async (event) => {
 		const data = await event.request.formData();
-		const source = data.get('source') as string;
+		const referrer = data.get('referrer') as string;
 		const email = data.get('email') as string;
 		const firstName = data.get('first_name') as string;
 		const lastName = data.get('last_name') as string;
@@ -43,7 +35,7 @@ export const actions = {
                 email:email,
                 first_name:firstName,
                 last_name:lastName,
-                source:getSourceName(source),
+                source:referrer,
                 platform_url:platform_url,
                 IP:event.getClientAddress(),
                 platforms:platforms.join(","),
