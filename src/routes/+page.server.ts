@@ -18,14 +18,14 @@ export const actions = {
 		const email = data.get('email') as string;
 		const firstName = data.get('first_name') as string;
 		const lastName = data.get('last_name') as string;
-		const youtubeChannel = data.get('youtube_channel') as string;
+		const youtubeChannel = data.get('channel_url') as string;
 
         try{
             pb.collection('register').create({
                 email:email,
                 first_name:firstName,
                 last_name:lastName,
-                youtube_channel:youtubeChannel,
+                channel_url:channel_url,
                 IP:event.getClientAddress(),
             });
         } catch(_){

@@ -34,12 +34,12 @@
     />
   </label>
   <label class="label w-full">
-    <span>Youtube Channel URL</span>
+    <span>Channel URL</span>
     <input
       class="input w-full"
       type="text"
-      name="youtube_url"
-      placeholder="https://www.youtube.com/@example"
+      name="channel_url"
+      placeholder="https://www.example.com/@example"
       required
     />
   </label>
