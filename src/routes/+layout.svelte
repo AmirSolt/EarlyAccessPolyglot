@@ -24,7 +24,8 @@
         <img src="logo.png" alt="Logo" class="w-12" />
       </a>
       <p>POLYTUBE 2024</p>
-      <p>More information coming soon!</p>
+      <a href="/terms-of-service">Terms of Service</a>
+      <a href="/privacy-policy">Privacy Policy</a>
     </div>
   </svelte:fragment>
 </AppShell>
