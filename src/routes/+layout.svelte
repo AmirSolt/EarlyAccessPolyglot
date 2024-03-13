@@ -14,8 +14,12 @@
       </svelte:fragment>
     </AppBar>
   </svelte:fragment>
-  <!-- Page Route Content -->
-  <slot />
+
+  <div class="flex justify-center items-center m-4">
+    <div>
+      <slot />
+    </div>
+  </div>
 
   <svelte:fragment slot="footer">
     <hr />

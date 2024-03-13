@@ -5,14 +5,12 @@
 </script>
 
 <br />
-<div class="flex justify-center items-center m-4">
-  <div class="max-w-6xl flex flex-col gap-4">
-    <Hero />
-    <Description />
-    <hr />
-    <br />
-    <SignupForm />
-  </div>
+<div class="max-w-6xl flex flex-col gap-4">
+  <Hero />
+  <Description />
+  <hr />
+  <br />
+  <SignupForm />
 </div>
 
 <br />
